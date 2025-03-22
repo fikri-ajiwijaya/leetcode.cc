@@ -6,3 +6,9 @@ CXXFLAGS += -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wunused -Woverloaded-v
 
 # https://stackoverflow.com/questions/2408038/what-does-wall-in-g-wall-test-cpp-o-test-do
 CXXFLAGS += -Wcast-qual -Wpointer-arith -Wfloat-equal
+
+# https://clang.llvm.org/docs/AddressSanitizer.html
+CXXFLAGS += -fsanitize=address -O1 -fno-omit-frame-pointer -fno-optimize-sibling-calls
+
+# https://clang.llvm.org/docs/UndefinedBehaviorSanitizer.html
+CXXFLAGS += -fsanitize=undefined -fno-sanitize-recover=all
