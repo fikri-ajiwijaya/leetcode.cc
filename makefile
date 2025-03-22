@@ -11,4 +11,7 @@ CXXFLAGS += -Wcast-qual -Wpointer-arith -Wfloat-equal
 CXXFLAGS += -fsanitize=address -O1 -fno-omit-frame-pointer -fno-optimize-sibling-calls
 
 # https://clang.llvm.org/docs/UndefinedBehaviorSanitizer.html
-CXXFLAGS += -fsanitize=undefined -fno-sanitize-recover=all
+CXXFLAGS += -fsanitize=undefined,float-divide-by-zero,local-bounds,vptr,integer,nullability -fno-sanitize-recover=all
+
+# https://clang.llvm.org/docs/SanitizerSpecialCaseList.html
+CXXFLAGS += -fsanitize-ignorelist=ignorelist.txt
