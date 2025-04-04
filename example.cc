@@ -1,13 +1,9 @@
-#include <print>
-#include <string>
-#include <vector>
+#include <test.hh>
 
-auto main(int const argc, char const* const* const argv) -> int {
-	auto const args = std::vector<std::string>{argv+1, argv+argc};
-
-	for (auto const& i : args)
-		std::print("{}\n", i);
-
-	std::print("Hello, world!\n");
+auto main() -> int {
+	auto const example_test = test::node_t{"example", test::list_t{
+		[] static { return test::fail("Hello, world!"); }
+	}};
+	test_node_print(test_function_run_copy(example_test));
 	return 0;
 }

@@ -18,9 +18,12 @@
 		"autoClearConsole": true,
 		"commands": [
 			{
-				"match": "\\.cc$",
-				"cmd": "./run-on-save '${workspaceFolder}' '${fileDirname}/${fileBasenameNoExt}'"
+				"match": "\\.cc$|\\.hh$|\\.tt$",
+				"cmd": "./test/run-on-save '${file}' '${workspaceFolder}'"
 			}
 		]
+	},
+	"files.associations": {
+		"*.tt": "cpp"
 	}
 }
