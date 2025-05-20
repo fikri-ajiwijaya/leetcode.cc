@@ -1,3 +1,6 @@
 [submodule ".devcontainer/clang"]
 	path = .devcontainer/clang
 	url = https://github.com/desmond-rhodes/.devcontainer.clang
+[submodule "test"]
+	path = test
+	url = https://github.com/desmond-rhodes/test.cc
