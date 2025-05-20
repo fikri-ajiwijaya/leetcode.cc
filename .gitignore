@@ -1,0 +1,12 @@
+*
+!*.*
+!*/
+
+!test
+
+!makefile
+!run-on-save
+
+*.d
+*.o
+*.test.main
